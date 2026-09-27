@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo transparente para integrar limpo no DUI do FiveM */
+html, body {
+  background: transparent !important;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* PAINEL ESCURO */
+.panel {
+  width: 320px;
+  height: 340px;
+  background-color: #121214; /* Cor exata do fundo da imagem */
+  border-radius: 12px;        /* Bordas arredondadas */
+  border: 1px solid #1c1c1f; /* Borda suave para dar acabamento */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
