@@ -1,16 +1,16 @@
 window.addEventListener('message', function(event) {
     const data = event.data;
 
-    // Exemplo: Mostrar ou esconder o painel pelo Lua
-    if (data.action === "showPanel") {
-        document.querySelector('.panel').style.display = data.status ? "block" : "none";
+    // Abrir/Fechar painel via Lua
+    if (data.action === "show") {
+        document.body.style.display = data.status ? "flex" : "none";
     }
 
-    // Exemplo: Atualizar conteúdo dinamicamente enviado pelo Lua
-    if (data.action === "updateContent") {
-        const panel = document.querySelector('.panel');
-        if (panel) {
-            panel.innerHTML = data.htmlContent;
+    // Inserir conteúdo HTML dinâmico enviado pelo Lua
+    if (data.action === "setContent") {
+        const contentDiv = document.getElementById('content');
+        if (contentDiv) {
+            contentDiv.innerHTML = data.html;
         }
     }
 });
