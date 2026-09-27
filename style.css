@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* Fundo transparente para integrar limpo no DUI do FiveM */
+/* Fundo completamente transparente para integração perfeita no FiveM */
 html, body {
   background: transparent !important;
   width: 100vw;
@@ -16,12 +16,26 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-/* PAINEL ESCURO */
-.panel {
+.panel-container {
+  position: relative;
   width: 320px;
   height: 340px;
-  background-color: #121214; /* Cor exata do fundo da imagem */
-  border-radius: 12px;        /* Bordas arredondadas */
-  border: 1px solid #1c1c1f; /* Borda suave para dar acabamento */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.panel-container svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.panel-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: #ffffff;
 }
